@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="rich.gantteventwidget.GanttEventWidget" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Gantt Event Widget</name>
+    <description>Displays a list of events in a Gantt chart.</description>
+    <icon/>    
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Gantt Data">
+                <property key="data" type="datasource" isList="true">
+                    <caption>Data source</caption>
+                    <description />
+                </property>
+                <property key="nameAttribute" type="attribute" dataSource="data" required="false">
+                    <caption>Name</caption>
+                    <description>This is main title for the gantt block/tile.</description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+                <property key="colourAttribute" type="attribute" dataSource="data" required="false">
+                    <caption>Colour</caption>
+                    <description>This will provide the background colouring for the gantt block/tile.</description>
+                    <attributeTypes>
+                        <attributeType name="Enum" />
+                    </attributeTypes>
+                </property>
+                <property key="startDateAttribute" type="attribute" dataSource="data" required="false">
+                    <caption>Start Date</caption>
+                    <description>Start date of the event, this provides the starting point for each event on the chart.</description>
+                    <attributeTypes>
+                        <attributeType name="DateTime" />
+                    </attributeTypes>
+                </property>
+                <property key="endDateAttribute" type="attribute" dataSource="data" required="false">
+                    <caption>End Date</caption>
+                    <description>End date of the event, this provides the ending point for each event on the chart.</description>
+                    <attributeTypes>
+                        <attributeType name="DateTime" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

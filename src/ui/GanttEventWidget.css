@@ -1,0 +1,24 @@
+/*
+Place your custom CSS here
+*/
+.widget-hello-world {
+
+}
+
+.gantt-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.gantt-table th,
+.gantt-table td {
+    border: 1px solid #ccc;
+    padding: 4px;
+    text-align: center;
+}
+
+.gantt-event-cell {
+    color: white;
+    font-weight: bold;
+}
