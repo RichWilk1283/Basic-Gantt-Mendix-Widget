@@ -22,3 +22,16 @@ Place your custom CSS here
     color: white;
     font-weight: bold;
 }
+
+.first-col {
+    width: 10%;
+}
+
+.normal-col {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.sideways-text {
+    writing-mode: vertical-rl;
+}
