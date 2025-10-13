@@ -13,12 +13,17 @@ interface Event {
     daysDuration: number;
 }
 
-export function GanttEventWidget({ data, nameAttribute, colourAttribute, startDateAttribute, endDateAttribute } : GanttEventWidgetContainerProps): ReactElement {
+export function GanttEventWidget({ data, nameAttribute, colourAttribute, startDateAttribute, endDateAttribute, myBoolean } : GanttEventWidgetContainerProps): ReactElement {
     const runUnitTests: boolean = true;
+    const consoleLogging: boolean = true;
 
     if (runUnitTests === true){
         testRunner();
     }
+
+    const darkModeSetting: string = myBoolean ? "Dark" : "Light";
+    const darkModeBackgroundColour: string = myBoolean ? "black" : "white";
+    const darkModeTextColour: string = myBoolean ? "white" : "black";
 
     const [eventsArray, setEventsArray] = useState<Event[]>([]);
 
@@ -59,13 +64,17 @@ export function GanttEventWidget({ data, nameAttribute, colourAttribute, startDa
     
     const datesArray = getDateRange(earliestDate, latestDate);
 
-    
-    //Testing console logs.
-    //console.log("eventsArray: ", eventsArray);
-    //Testing console logs.
+    //Test console logs.
+    if (consoleLogging === true){
+        console.log("eventsArray: ", eventsArray);
+    }
+    //Test console logs.
 
     return (
         <div>
+            <div className="darkmode-banner" style={{backgroundColor: darkModeBackgroundColour}}>
+                <p style={{color: darkModeTextColour}}>Current Dark Mode Setting: {darkModeSetting}</p>
+            </div>
             <table className="gantt-table">
                 <thead>
                     <tr>

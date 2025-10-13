@@ -16,6 +16,7 @@ export interface GanttEventWidgetContainerProps {
     colourAttribute?: ListAttributeValue<string>;
     startDateAttribute?: ListAttributeValue<Date>;
     endDateAttribute?: ListAttributeValue<Date>;
+    myBoolean: boolean;
 }
 
 export interface GanttEventWidgetPreviewProps {
@@ -34,4 +35,5 @@ export interface GanttEventWidgetPreviewProps {
     colourAttribute: string;
     startDateAttribute: string;
     endDateAttribute: string;
+    myBoolean: boolean;
 }

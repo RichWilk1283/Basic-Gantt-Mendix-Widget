@@ -42,6 +42,15 @@
                     </attributeTypes>
                 </property>
             </propertyGroup>
+            <propertyGroup caption="Dark Mode">
+                <property key="myBoolean" type="boolean" defaultValue="false">
+                    <caption> Dark Mode On:</caption>
+                    <description>Set to true for darko mode CSS styling</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility"/>
+            </propertyGroup>
         </propertyGroup>
     </properties>
 </widget>

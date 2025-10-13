@@ -35,3 +35,7 @@ Place your custom CSS here
 .sideways-text {
     writing-mode: vertical-rl;
 }
+ 
+.darkmode-banner {
+    width: 100%;
+}

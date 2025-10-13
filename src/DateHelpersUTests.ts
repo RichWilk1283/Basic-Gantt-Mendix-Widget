@@ -5,14 +5,14 @@ export function testRunner(): void {
 }
 
 function getEarliestDateTest(): string{
-    var dateA: Date = new Date();
+    const dateA: Date = new Date();
     dateA.setHours(0,0,0,0);
-    var dateB: Date = new Date(dateA.getTime() + 1 * 24 * 60 * 60 * 1000);
-    var dateC: Date = new Date(dateA.getTime() + 2 * 24 * 60 * 60 * 1000);
+    const dateB: Date = new Date(dateA.getTime() + 1 * 24 * 60 * 60 * 1000);
+    const dateC: Date = new Date(dateA.getTime() + 2 * 24 * 60 * 60 * 1000);
 
-    var testRange: Date[] = [dateA, dateB, dateC];
-    var actual: Date = getEarliestDate(testRange);
+    const testRange: Date[] = [dateA, dateB, dateC];
+    const actual: Date = getEarliestDate(testRange);
 
-    var result: string = actual.getTime() === dateA.getTime() ? "Pass" : "Fail";
+    const result: string = actual.getTime() === dateA.getTime() ? "Pass" : "Fail";
     return result;
 }
